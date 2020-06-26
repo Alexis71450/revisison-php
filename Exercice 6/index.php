@@ -11,7 +11,12 @@ Exercice : Créer une fonction sortArray() qui prend 1 argument de type "array" 
 //-------------------------------------------------------------------------
 
 
-
+function sortArray(array $array){
+    sort($array);
+    
+    return $array;
+    
+};
 
 
 //-------------------------------------------------------------------------
