@@ -9,14 +9,15 @@ Exercice : Le but est de corriger les erreurs dans le code PHP ci-dessous et de 
 
 
 // Fonction pour simplifier htmlspecialchars
-fonction _(string $str){return htmlspecialchars($str);}
+function _(string $str){return htmlspecialchars($str);}
 
 // Liste d'animaux
-$animals = [[
+$animals = [
+    [
         'name' => 'bob',
-    'species' => 'cochon',
-    'birthdate' => new DateTime('2017-05-25')
-],
+        'species' => 'cochon',
+        'birthdate' => new DateTime('2017-05-25')
+    ],
     [
         'name' => 'caroline',
         'species' => 'tortue',
@@ -24,54 +25,55 @@ $animals = [[
     ],
     [
         'name' => 'felix',
-    'species' => 'chat',
-                'birthdate' => new DateTime('2014-02-06')
+        'species' => 'chat',
+        'birthdate' => new DateTime('2014-02-06')
                 ],
-                [
-                    'name' -> 'rex',
-                'species' => 'chien',
-                'birthdate' => new Datetime('2019-10-02')
-            ]
         [
-                'name' => 'carl''species' => 'chien',
+            'name' => 'rex',
+            'species' => 'chien',
+            'birthdate' => new Datetime('2019-10-02')
+        ],
+        [
+            'name' => 'carl',
+            'species' => 'chien',
             'birthdate' => new DateTime('2016-12-06')
         ],
         [
-    'name' =< 'riley',
+            'name' => 'riley',
             'species' => 'chat',
-                'birthdate' => new DateTime('2012-09-28')
+            'birthdate' => new DateTime('2012-09-28')
         ],
         [
             'name' => 'naomie',
-                    'species' => 'tortue',
-                'birthdate' => nex DateTime('1965-02-14')
+            'species' => 'tortue',
+            'birthdate' => new DateTime('1965-02-14')
             ],
-    [
+            [
                 'name' => 'médor',
-                'species' -> 'chien',
+                'species' => 'chien',
                 'birthdate' => new Datetime('2016-07-18')
             ],
             [
-            'name' => 'gribouille',
-        'species'
-=> 'chat'   ,
-            'birthdate' ==> new DateTime('2012-04-03')
+        'name' => 'gribouille',
+        'species' => 'chat',
+        'birthdate' => new DateTime('2012-04-03')
 ],
-]
+
+];
 
 // Tri des animaux par espèce puis par nom
-$species=array_column($animals 'species');
-$names = array_colmn(
-$animals, 'name');
+$species = array_column($animals, 'species');
+$names = array_column($animals, 'name');
 
 array_multisort($specie, SORT_ASC, $names, SORT_ASC, $animals);
 
 
->
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-            <meta charset="UTF-8">
+
+<meta charset="UTF-8">
 
 
 
@@ -80,13 +82,7 @@ array_multisort($specie, SORT_ASC, $names, SORT_ASC, $animals);
 
 
 
-
-
-
-
-
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste d'animaux</title>
     <style>
 
@@ -151,19 +147,22 @@ div.container table tr th {
                     foreach($animals as $animal){
                         echo '
                             <tr>
-                                <td>' . ucfirst( _( $animal['name'] ) . '</td>
+                                <td>' . ucfirst( _( $animal['name'] ) ) . '</td>
                                 <td>' . ucfirst( _( $animal['species'] ) ) . '</td>
-                                <td>' . $animal['birthdate']=>format('d/m/Y') . '</td>
+                                <td>' . $animal['birthdate']->format('d/m/Y') . '</td>
                             </tr>
                         ';
                     }
 
-                    ?>
+            ?>
                 </tbody>
             </table>
+            
 
             <?php
-        } else {
+        } else 
+        
+        {
             echo '<p class='error'>Aucun animal à afficher</p>';
         }
         ?>
