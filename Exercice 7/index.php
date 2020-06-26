@@ -11,7 +11,11 @@ Exercice : Créer une fonction removeDuplicates() qui prend 1 argument de type "
 //-------------------------------------------------------------------------
 
 
-
+function removeDuplicates(array $array){
+    $array = array_unique($array);
+    return $array;
+    
+};
 
 
 //-------------------------------------------------------------------------
