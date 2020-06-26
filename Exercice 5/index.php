@@ -11,6 +11,9 @@ Exercice : Créer une fonction biggestOf() qui prend 2 arguments de type "int". 
 //-------------------------------------------------------------------------
 
 
+function biggestOf(int $num , int $other){
+    return max($num,$other);
+};
 
 
 
